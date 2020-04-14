@@ -62,21 +62,3 @@ def init_keys():
         # Redshift
         Key([mod_key], "r", lazy.spawn("redshift -O 2400")),
         Key([mod_key, "shift"], "r", lazy.spawn("redshift -x")),
-
-        # ------------ HARDWARE CONFIG ------------
-
-        # Volume
-        Key([], "XF86AudioLowerVolume", lazy.spawn(
-            "pactl set-sink-volume @DEFAULT_SINK@ -5%"
-        )),
-        Key([], "XF86AudioRaiseVolume", lazy.spawn(
-            "pactl set-sink-volume @DEFAULT_SINK@ +5%"
-        )),
-        Key([], "XF86AudioMute", lazy.spawn(
-            "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-        )),
-
-        #Brightness
-        Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
-        Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
-    ]

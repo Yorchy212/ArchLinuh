@@ -51,7 +51,7 @@ def init_keys():
         Key([mod_key, "shift"], "m", lazy.spawn("rofi -show")),
 
         # Browser
-        Key([mod_key], "b", lazy.spawn("firefox")),
+        Key([mod_key], "b", lazy.spawn("chromium")),
 
         # File Manager
         Key([mod_key], "f", lazy.spawn("thunar")),
